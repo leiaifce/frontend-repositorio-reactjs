@@ -6,6 +6,8 @@ import { NavLink} from 'react-router-dom'
 import Logo from '../../Images/Logo.png'
 function Header (){
 
+    const user = 'ada'
+
     return ( 
         <header className="container">
             <div className='container-logo'>

@@ -1,0 +1,56 @@
+main {
+    height: 90vh;
+    width: 100%;
+}
+
+
+.container-slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.container-slider-conteudo {
+    min-width: 100vw;
+    min-height: 100%;
+    animation: opacidade 1.5s ease-in;
+}
+
+.ativo {
+    opacity: 1;
+    align-items: center;
+}
+.container-slider .btn{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+.container-slider .left {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    z-index: 1;
+}
+
+.container-slider .right {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    z-index: 1;
+}
+
+@keyframes opacidade {
+    0%{
+        opacity: 0;
+    }
+
+
+    100%{
+        opacity: 1;
+    }
+}
