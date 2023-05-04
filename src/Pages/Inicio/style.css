@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,700;0,900;1,700&display=swap');
+
+
+main {
+    height: 90vh;
+    width: 100%;
+}
+
+
+.container-slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.container-slider-conteudo {
+    min-width: 100vw;
+    min-height: 100%;
+    animation: opacidade 1.5s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.container-slider-conteudo-radius{
+    width: 15%;
+    height: 25%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #008000;
+    z-index: -1;
+    border-bottom-right-radius: 75%;
+    box-shadow: rgba(0, 128, 0,0.5) 0px 4px 12px;
+}
+
+.container-slider-conteudo-radius-dois{
+    width: 20%;
+    height: 30%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #008000;
+    z-index: -1;
+    border-top-left-radius: 90%;
+    box-shadow: rgba(0, 128, 0,0.5) 0px 4px 12px;
+}
+
+.container-slider-conteudo-bolinhas-um{
+    width: 10px;
+    height: 10px;
+    background-color: #008000;
+    position: absolute;
+    top: 15%;
+    right: 45%;
+    
+}
+
+.container-slider-conteudo-bolinhas-dois{
+    width: 10px;
+    height: 10px;
+    background-color: #008000;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+}
+
+.container-slider-conteudo-bolinhas-tres{
+    width: 20px;
+    height: 10px;
+    background-color: #008000;
+    position: absolute;
+    top: 70%;
+    right: 30%;
+}
+
+.container-slider-conteudo-bolinhas-quatro{
+    width: 15px;
+    height: 10px;
+    background-color: #008000;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.container-slider-conteudo-bolinhas-cinco{
+    width: 15px;
+    height: 10px;
+    background-color: #008000;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.container-slider-conteudo-bolinhas-seis{
+    width: 10px;
+    height: 10px;
+    background-color: #008000;
+    position: absolute;
+    top: 40%;
+    left: 3%;
+}
+
+
+.ativo {
+    opacity: 1;
+    align-items: center;
+}
+.container-slider .btn{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-slider .left {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    z-index: 1;
+}
+
+.container-slider .right {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    z-index: 1;
+}
+
+.container-slider-conteudo-texto{
+    width: 60%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.container-slider-conteudo-texto-titulo{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-slider-conteudo-texto-titulo h1{
+    color: #008000;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem;
+}
+
+.container-slider-conteudo-texto-paragrafo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.container-slider-conteudo-texto p{
+    font-size: 1.3rem;
+    line-height: 30px;
+    text-align: justify;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: #2f4f4f;
+    
+}
+
+.container-slider-conteudo-imagem{
+    width: 35%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-slider-conteudo-imagem-Capistrano{
+    width: 130%;
+    min-width: 250px;
+    min-height: 250px;
+    filter: drop-shadow(8px 6px 4px #C4C4CC);
+}
+
+.container-slider-conteudo-imagem-Estatua{
+    width: 80%;
+    height: 80%;
+    min-width: 250px;
+    min-height: 250px;
+    filter: drop-shadow(8px 6px 4px #C4C4CC);
+}
+
+
+@keyframes opacidade {
+    0%{
+        opacity: 0;
+    }
+
+
+    100%{
+        opacity: 1;
+    }
+}
