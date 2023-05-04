@@ -73,7 +73,7 @@ const Inicio = () =>{
                                 </div>
                             </div>
                             <div className="container-slider-conteudo-imagem">
-                                <img className="container-slider-conteudo-imagem-Capistrano" src={CapistranoLogo} alt="Capistrano"/>
+                                <div className="container-slider-conteudo-imagem-Capistrano"/>
                             </div>
                             
                         </div>
@@ -102,14 +102,13 @@ const Inicio = () =>{
                                 </div>
                             </div>
                             <div className="container-slider-conteudo-imagem">
-                                <img className="container-slider-conteudo-imagem-Estatua" src={Estatuaimg} alt="Capistrano"/>
+                                <div className="container-slider-conteudo-imagem-Estatua"/>
                             </div>
                         </div>
                     }
                     {
                         indexLista ===3&&
                         <div className="container-slider-conteudo" > 
-                            <div className="container-slider-conteudo" > 
                             <div className="container-slider-conteudo-bolinhas-um"></div>
                             <div className="container-slider-conteudo-bolinhas-dois"></div>
                             <div className="container-slider-conteudo-bolinhas-tres"></div>
@@ -123,16 +122,15 @@ const Inicio = () =>{
                         
                             <div className="container-slider-conteudo-texto">
                                 <div className="container-slider-conteudo-texto-titulo">  
-                                    <h1>Obras</h1>
+                                <h1>Obras</h1>
                                 </div>
                                 <div className="container-slider-conteudo-texto-paragrafo">
-                                    <p>A obra de Capistrano de Abreu é reconhecida por sua rigorosa investigação das fontes e por sua visão crítica dos fatos históricos. Seus estudos e pesquisas estabelecem um contraponto importante em relação aos trabalhos de Francisco Adolfo de Varnhagen.</p>
+                                <p>A obra de Capistrano de Abreu é reconhecida por sua rigorosa investigação das fontes e por sua visão crítica dos fatos históricos. Seus estudos e pesquisas estabelecem um contraponto importante em relação aos trabalhos de Francisco Adolfo de Varnhagen.</p>
                                 </div>
                             </div>
                             <div className="container-slider-conteudo-imagem">
-                                <img className="container-slider-conteudo-imagem-Capistrano" src={CapistranoLogo} alt="Capistrano"/>
+                                <div className="container-slider-conteudo-imagem-Livros"/>
                             </div>
-                        </div>
                         </div>
                     }
                 </div>

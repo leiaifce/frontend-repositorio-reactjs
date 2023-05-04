@@ -37,8 +37,8 @@ main {
 }
 
 .container-slider-conteudo-radius-dois{
-    width: 20%;
-    height: 30%;
+    width: 40%;
+    height: 100%;
     bottom: 0;
     right: 0;
     position: absolute;
@@ -73,7 +73,7 @@ main {
     background-color: #008000;
     position: absolute;
     top: 70%;
-    right: 30%;
+    right: 50%;
 }
 
 .container-slider-conteudo-bolinhas-quatro{
@@ -90,8 +90,8 @@ main {
     height: 10px;
     background-color: #008000;
     position: absolute;
-    top: 20%;
-    right: 10%;
+    top: 80%;
+    right: 60%;
 }
 
 .container-slider-conteudo-bolinhas-seis{
@@ -171,33 +171,39 @@ main {
     font-weight: bold;
     font-family: 'Inter', sans-serif;
     color: #2f4f4f;
-    
 }
 
 .container-slider-conteudo-imagem{
     width: 35%;
     height: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .container-slider-conteudo-imagem-Capistrano{
-    width: 130%;
-    min-width: 250px;
-    min-height: 250px;
-    filter: drop-shadow(8px 6px 4px #C4C4CC);
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Images/Capistrano.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
 .container-slider-conteudo-imagem-Estatua{
-    width: 80%;
-    height: 80%;
-    min-width: 250px;
-    min-height: 250px;
-    filter: drop-shadow(8px 6px 4px #C4C4CC);
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Images/Estatua-capistrano.png');
+    background-size: 80%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
+.container-slider-conteudo-imagem-Livros {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Images/Obras-livros.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @keyframes opacidade {
     0%{
