@@ -319,8 +319,6 @@ main {
         background-position: center bottom;
     }
 
-    
-
     .container-slider-conteudo-bolinhas-cinco, 
     .container-slider-conteudo-bolinhas-dois, 
     .container-slider-conteudo-bolinhas-quatro, 
@@ -329,8 +327,6 @@ main {
     .container-slider-conteudo-bolinhas-um{
         display: none;
     }
-
-
 
 }
 
@@ -344,18 +340,13 @@ main {
     }
 
     .container-slider-conteudo-radius{
-        height: 15%;
-        width: 25%;
+        height: 5%;
+        width: 15%;
     }
 
     .container-slider-conteudo-texto{
         width: 100%;
         height: 70%;
-    }
-
-    .container-slider-conteudo-imagem{
-        width: 50%;
-        height: 30%;
     }
 
     .container-slider-conteudo-texto-paragrafo p {
@@ -372,13 +363,18 @@ main {
     .container-slider .right{
         top: 70%;
     }
+    .container-slider-conteudo-imagem{
+        width: 60%;
+        height: 30%;
+    }
     .container-slider-conteudo-imagem-Capistrano{
-        background-size: 130%;
+        background-size: 100%;
         background-position: center ;
     }
 
     .container-slider-conteudo-imagem-Estatua{
-        background-size: 80%;
+        background-size: 55%;
+        background-position: center;
     }
 
     .container-slider-conteudo-imagem-Livros{
@@ -391,3 +387,4 @@ main {
     }
 
 }
+
