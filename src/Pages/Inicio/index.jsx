@@ -108,7 +108,7 @@ const Inicio = () =>{
                     }
                     {
                         indexLista ===3&&
-                        <div className="container-slider-conteudo" > 
+                        <div className="container-slider-conteudo"  > 
                             <div className="container-slider-conteudo-bolinhas-um"></div>
                             <div className="container-slider-conteudo-bolinhas-dois"></div>
                             <div className="container-slider-conteudo-bolinhas-tres"></div>
@@ -120,7 +120,7 @@ const Inicio = () =>{
                             <div className="container-slider-conteudo-radius"></div>
                             <div className="container-slider-conteudo-radius-dois"></div>
                         
-                            <div className="container-slider-conteudo-texto">
+                            <div className="container-slider-conteudo-texto obras">
                                 <div className="container-slider-conteudo-texto-titulo">  
                                 <h1>Obras</h1>
                                 </div>

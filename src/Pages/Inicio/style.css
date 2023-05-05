@@ -215,3 +215,179 @@ main {
         opacity: 1;
     }
 }
+
+
+@media screen and (max-width: 1280px) {
+    .container-slider-conteudo-texto {
+        width: 60%;
+    }
+
+    .container-slider-conteudo-texto-titulo h1 {
+        font-size: 2rem;
+    }
+
+    .container-slider-conteudo-texto-paragrafo p {
+        font-size: 1rem;
+    }
+    .container-slider-conteudo-radius {
+        height: 17%;
+        width: 10%;
+    }
+
+    .container-slider-conteudo-radius-dois {
+        height: 75%;
+
+    }
+
+    .container-slider-conteudo-imagem {
+        width: 40%;
+    }
+    .container-slider-conteudo-imagem-Capistrano{
+        background-size: 100%;
+    }
+    
+    .container-slider-conteudo-imagem-Estatua{
+        background-size: 75%;
+    }
+
+    .container-slider-conteudo-imagem-Livros{
+        background-size: 75%;
+    }
+
+    .container-slider .btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container-slider .left {
+        left: 1%;
+    }
+
+    .container-slider .right {
+        right: 1%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container-slider-conteudo{
+        flex-direction: column;
+    }
+
+    .container-slider-conteudo-texto{
+        width: 100%;
+        height: 80%;
+        justify-content: end;
+    }
+
+    .container-slider .btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container-slider-conteudo-texto-titulo h1{
+        
+        font-size: 2.2rem;
+    }
+
+    .container-slider-conteudo-texto-paragrafo p{
+        font-size: 1.2rem;
+    }
+
+    .container-slider-conteudo-radius{
+        height: 15%;
+        width: 18%;
+    }
+
+    .container-slider-conteudo-radius-dois{
+        height: 50%;
+    }
+
+    .container-slider-conteudo-imagem{
+        width: 100%;
+    }
+
+    .container-slider-conteudo-imagem-Estatua{
+        background-size: 45%;
+    }
+
+    .container-slider-conteudo-imagem-Livros{
+        background-size: 60%;
+    }
+
+    .container-slider-conteudo-imagem-Capistrano{
+        background-size: 75%;
+        background-position: center bottom;
+    }
+
+    
+
+    .container-slider-conteudo-bolinhas-cinco, 
+    .container-slider-conteudo-bolinhas-dois, 
+    .container-slider-conteudo-bolinhas-quatro, 
+    .container-slider-conteudo-bolinhas-seis, 
+    .container-slider-conteudo-bolinhas-tres, 
+    .container-slider-conteudo-bolinhas-um{
+        display: none;
+    }
+
+
+
+}
+
+@media screen and (max-width: 568px){
+    .container-slider-conteudo-radius-dois{
+        height: 30%;
+    }
+
+    .container-slider-conteudo{
+        flex-direction: column;
+    }
+
+    .container-slider-conteudo-radius{
+        height: 15%;
+        width: 25%;
+    }
+
+    .container-slider-conteudo-texto{
+        width: 100%;
+        height: 70%;
+    }
+
+    .container-slider-conteudo-imagem{
+        width: 50%;
+        height: 30%;
+    }
+
+    .container-slider-conteudo-texto-paragrafo p {
+
+        font-size: 0.8rem;
+    }
+    
+    .container-slider-conteudo-texto-titulo h1{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .container-slider .left, 
+    .container-slider .right{
+        top: 70%;
+    }
+    .container-slider-conteudo-imagem-Capistrano{
+        background-size: 130%;
+        background-position: center ;
+    }
+
+    .container-slider-conteudo-imagem-Estatua{
+        background-size: 80%;
+    }
+
+    .container-slider-conteudo-imagem-Livros{
+        background-size: 100%;
+    }
+
+    .container-slider-conteudo .obras{
+        height: 50%;
+        
+    }
+
+}
