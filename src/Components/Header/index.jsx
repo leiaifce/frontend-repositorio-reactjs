@@ -2,7 +2,7 @@ import './style.css'
 
 import { NavLink} from 'react-router-dom'
 
-import { FaBars,FaTimes } from "react-icons/fa";
+import { FaBars,FaTimes,FaUserAlt } from "react-icons/fa";
 
 import Logo from '../../Images/Logo.png'
 import { useState } from 'react';
@@ -32,12 +32,14 @@ function Header (){
                 <NavLink to="/Obras">Obras</NavLink>
                 <NavLink to="/Biografia">Biografia</NavLink>
                 <NavLink to="/Homenagens">Homenagens</NavLink>
+                <FaUserAlt className='container-navbar-usuario'/>
             </nav>
             <nav className={menuMobile}>
                 <NavLink to="/">Inicio</NavLink>
                 <NavLink to="/Obras">Obras</NavLink>
                 <NavLink to="/Biografia">Biografia</NavLink>
                 <NavLink to="/Homenagens">Homenagens</NavLink>
+                <FaUserAlt className='container-navbar-usuario'/>
             </nav>
             <div className='container-hamburguer' onClick={menu}>
                 {abertoOuFechado === false?(

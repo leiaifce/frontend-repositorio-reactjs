@@ -1,5 +1,5 @@
 import axios from "axios"
 
 export const api = axios.create({
-    baseURL: "https://repositorio-capistrano-api.vercel.app/"
+    baseURL: "https://repositorio-capistrano-api-leiaifce.vercel.app/"
 })
