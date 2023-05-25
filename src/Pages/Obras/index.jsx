@@ -54,7 +54,7 @@ export const Obras = () => {
         }
         try{
 
-            const res = await api.get(_id)
+            const res = await api.get('/pegar_obraid/'+ _id)
 
             setPesquisa(res.data)
             setPesquisaId(true)

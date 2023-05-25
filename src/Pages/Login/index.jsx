@@ -1,42 +1,38 @@
+import { useState } from "react"
 import Header from "../../Components/Header"
 import { api } from "../../Services/API"
 import { loginToken, setarIdUsuario, setarNomeUsuario, setarTipoUsuario } from "../../Services/localstorage"
 import './style.css'
-import {FaUserCircle, FaUser, FaEye, FaEyeSlash} from 'react-icons/fa'
-import { Mensagem } from "../../Components/Mensagem"
-import { useState } from "react"
-
+import {FaEyeSlash, FaEye, FaUserAlt, FaUserCircle} from 'react-icons/fa'
 
 export const Login = () =>{
 
-    const [msg, setMsg] = useState('')
     const [verSenha, setVerSenha] = useState(false)
+    const [nome, setNome] = useState('')
+    const [senha, setSenha] = useState('')
 
     const mostrarSenha = () => {
-        if (verSenha === true){
-            setVerSenha(false)
-        }else{
+        if (verSenha === false){
             setVerSenha(true)
+        }else{
+            setVerSenha(false)
         }
     }
 
     const fazerLogin = async() =>{
 
         const data ={
-            usuario:'gustavo',
-            senha:'5455'
+            usuario:nome,
+            senha:senha
         }
-        if (msg) {
-            setMsg('')
-        }
+
         try{
             const res = await api.post('/login', data)
-            console.log(res)
+            console.log(data)
             setarIdUsuario(res.data.id)
             setarNomeUsuario(res.data.usuario)
             loginToken(res.data.token)
             setarTipoUsuario(res.data.tipo_usuario)
-            setMsg(res.data.message)
 
         }catch(err){
             console.log(err)
@@ -46,58 +42,71 @@ export const Login = () =>{
     return(
         <>
             <Header/>
-            <main className="main-login">
-                <div className="main-login-bolinha-um"></div>
-                <div className="main-login-bolinha-dois"></div>
+            <main className="main-logar-usuario">
 
-                <section className="conteiner-imagens">
-                    <div className="conteiner-imagens-texto">
-                        <h2>Se você deseja criar uma conta, entre em contato com o administrador responsável.</h2>
-                    </div>
-                    <div className="conteiner-imagens-imagem"></div>
-                </section>
-                <section className="conteiner-login">
-                    <div className="conteiner-login-card">
-                        <div className="conteiner-login-card-titulo">
-                            <h1>Login</h1>
-                        </div>
-                        <div className="conteiner-login-card-imagem"><FaUserCircle/></div>
-                        <div className="conteiner-login-card-formulario">
-                            <p>Nome</p>
-                            <div className="conteiner-login-card-formulario-campo">
-                                <FaUser/>
-                                <input></input>
-                            </div>
-                            <p>Senha</p>
-                            <div className="conteiner-login-card-formulario-campo">
-                                {verSenha === false?(
-                                    <>
-                                    <FaEyeSlash onClick={mostrarSenha}/>
-                                    <input type="password"></input>
-                                    </>
-                                ):(
-                                <>
-                                <FaEye onClick={mostrarSenha}/>
-                                <input type="text"></input>
-                                </>
-                                )
-                                }
-                                
-                                
-                            </div>
-                        </div>
-                        <div className="conteiner-login-card-botao">
-                            <button className="conteiner-login-card-botao-btn" onClick={fazerLogin}>Logar</button>
-                        </div>
+                <div className="main-logar-usuario-bolinha-um"></div>
+                <div className="main-logar-usuario-bolinha-dois"></div>
+                <div className="main-logar-usuario-coonteiner">
 
-                        <div className="conteiner-login-card-mensagem">
-                            {msg &&
-                                <Mensagem msg={msg} tipo='erro'/>
-                            }
-                            
+                    <div className="main-logar-usuario-conteiner-texto">
+                        <div className="main-logar-usuario-conteiner-texto-titulo">
+                            <h2>Se você deseja criar uma conta, entre em contato com o administrador responsável.</h2>
+                        </div>
+                        <div className="main-logar-usuario-conteiner-texto-imagem"></div>
+                    </div>
+                    <div className="main-logar-usuario-conteiner-formulario">
+                        <div className="main-logar-usuario-conteiner-formulario-conteiner">
+                            <div className="main-logar-usuario-conteiner-formulario-conteiner-login">
+                                <h2>Login</h2>
+                            </div>
+
+                            <div className="main-logar-usuario-conteiner-formulario-conteiner-conteiner">
+                                <FaUserCircle/>
+                            </div>
+
+                            <div className="main-logar-usuario-conteiner-formulario-conteiner-informacoes">
+
+                                    <p>Nome</p>
+                                    <div className="main-logar-usuario-conteiner-formulario-conteiner-informacoes-input">
+                                        <div className="main-logar-usuario-conteiner-formulario-conteiner-informacoes-input-svg"><FaUserAlt/></div>
+                                        
+                                        <input type="text"  onChange={(e) => setNome(e.target.value)}/>
+                                    </div>
+
+                                    <p>Senha</p>
+                                    <div className="main-logar-usuario-conteiner-formulario-conteiner-informacoes-input">
+
+                                        {verSenha === false? (
+                                            <>
+                                                <div className="main-logar-usuario-conteiner-formulario-conteiner-informacoes-input-svg" onClick={mostrarSenha}><FaEyeSlash/></div>
+                                            
+                                                <input type="password" onChange={(e) => setSenha(e.target.value)}/>
+                                            </>
+
+                                        ): (
+                                            <>
+                                                <div className="main-logar-usuario-conteiner-formulario-conteiner-informacoes-input-svg" onClick={mostrarSenha}><FaEye/></div>
+                                            
+                                                <input type="text" onChange={(e) => setSenha(e.target.value)}/>
+                                            </>
+                                        )}
+                                        
+                                    </div>
+
+                            </div>
+
+                            <div className="main-logar-usuario-conteiner-formulario-conteiner-botao">
+                                <button onClick={fazerLogin}>Logar</button>
+                            </div>
+
+                            <div className="main-logar-usuario-conteiner-formulario-conteiner-msg">
+                                        
+                            </div>
+    
                         </div>
                     </div>
-                </section>
+
+                </div>
             </main>
         </>
     )

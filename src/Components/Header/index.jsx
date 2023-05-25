@@ -57,8 +57,8 @@ function Header (){
                         <NavLink to="/">Inicio</NavLink>
                         <NavLink to="/Obras">Obras</NavLink>
                         <NavLink to="/Biografia">Biografia</NavLink>
-                        <NavLink to="#">Cadastrar Obras</NavLink>
-                        <NavLink to="#">Cadastrar Usuario</NavLink>
+                        <NavLink to="/Configurar_Obras">Configurar obras</NavLink>
+                        <NavLink to="/Cadastrar_Usuario">Cadastrar Usuario</NavLink>
                         <NavLink to="/Homenagens">Homenagens</NavLink>
                     </>
                 ):(
