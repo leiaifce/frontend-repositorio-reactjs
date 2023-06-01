@@ -1,10 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Header from "../../Components/Header"
 import './style.css'
 import { api } from "../../Services/API"
-
 import {FaPlus, FaPenAlt, FaTrashAlt} from 'react-icons/fa'
 import { Mensagem } from "../../Components/Mensagem"
+import { CircularProgress } from "@mui/material"
+import {AiOutlineSearch} from 'react-icons/ai'
+
+
+import fundo_deletar from '../../Images/fundo_deletar.svg'
 
 export const CadastrarObras = () => {
 
@@ -13,11 +17,49 @@ export const CadastrarObras = () => {
     const [modelCadastrar, setModelCadastrar] = useState(false)
     const [modelDeletar, setModelDeletar] = useState(false)
     const [opcao, setOpcao] = useState(false)
-
     const [titulo, setTitulo] = useState('')
     const [autores, setAutores] = useState('')
     const [resumo, setResumo] = useState('')
     const [descricao, setDescricao] = useState('')
+    const [Carregando, setCarregando] = useState(false)
+    const [Obras, setObras] = useState('')
+    const [pesquisaObra, setPesquisaObra] = useState(false)
+    const [pesquisa, setPesquisa] = useState('')
+    const [tituloPesquisa, setTituloPesquisa] = useState('')
+
+    const pesquisarObraTitulo = async () =>{
+        if (pesquisa) {
+            setPesquisa('')
+        }
+        try{
+            const data = {
+                titulo:tituloPesquisa
+            }
+            const res = await api.post("/pesquisar_obra", data)
+            console.log(res)
+            setPesquisaObra(true)
+            setPesquisa(res.data.pesquisa)
+
+            
+
+        }catch(err){
+            console.log(err)
+        }
+
+    }
+
+    const pegarObras = async () => {
+        try {
+            
+            const res = await api.get("/obras")
+            setObras(res.data)
+            setCarregando(true)
+            
+        }
+        catch (erro){
+            console.log(erro)
+        }
+    }
 
     const abrirModelDeletar = () =>{
         if(modelDeletar){
@@ -71,6 +113,11 @@ export const CadastrarObras = () => {
             console.log(err)
         }
     }
+
+    useEffect(() =>{
+        pegarObras()
+    
+    }, [])
 
     return(
         <div>
@@ -134,16 +181,59 @@ export const CadastrarObras = () => {
                                 <div className="main-cadastrar-obras-deletar">
                                     <div className="main-cadastrar-obras-deletar-conteudo">
                                         <div className="main-cadastrar-obras-deletar-conteudo-pesquisa">
-                                            <input type="text" placeholder="Digite o título"/>
+                                            <div className="main-cadastrar-obras-deletar-conteudo-pesquisa-btn">
+                                                <AiOutlineSearch className='containerUsuario-pesquisa-barra-loupe' onClick={pesquisarObraTitulo}/>
+                                            </div>
+                                            <div className="main-cadastrar-obras-deletar-conteudo-pesquisa-input">
+                                                <input type="text" placeholder="Digite o titulo da obra " onChange={(e) => setTituloPesquisa(e.target.value)}/>
+                                            </div>
                                         </div>
                                         <div className="main-cadastrar-obras-deletar-conteudo-obras">
-                                            a
+                                            {pesquisaObra === false?(
+                                                <>
+                                                    <h3>Pesquise por uma obra</h3>
+                                                    <img src={fundo_deletar} alt="esperando" />
+                                                </>
+                                            ):(
+                                                pesquisa.map((item) =>(
+                                                    <div className="main-cadastrar-obras-deletar-conteudo-obras-caixa">
+                                                        <div className="main-cadastrar-obras-deletar-conteudo-obras-caixa-titulo">
+                                                            <h3>Titulo: {item.titulo}</h3>
+                                                            <h3>Autores: {item.autores}</h3>
+                                                            <FaTrashAlt/>
+                                                        </div>
+                                                        <div className="main-cadastrar-obras-deletar-conteudo-obras-caixa-resumo">
+                                                            <h3>Resumo:</h3>
+                                                            <p>{item.resumo}</p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                ))
+                                            )}
                                         </div>
                                     </div>
                                     <div className="main-cadastrar-obras-deletar-container">
-                                        <div className="main-cadastrar-obras-deletar-container-lista-obras">
-                                            a
+                                        <div className="cadastrar-obras-deletar-container-lista-bloco">
+                                            <div className="main-cadastrar-obras-deletar-container-titulo">
+                                                <h1>Obras</h1>
+                                            </div>
+                                            <div className="main-cadastrar-obras-deletar-container-lista">
+            
+                                                    {Carregando===true?(
+                                                        
+                                                        Obras.map((itens, index) => (
+                                                            <>
+                                                                <div  className="main-cadastrar-obras-deletar-container-lista-bloco-titulo">
+                                                                    <h3> {itens.titulo}</h3>
+                                                                </div>
+                                                            </>
+                                                        ))
+                                                    ):(
+                                                        <CircularProgress></CircularProgress>
+                                                    )} 
+                                                </div>
                                         </div>
+                
                                     </div>
 
                                 </div>

@@ -281,18 +281,98 @@
     
 }
 .main-cadastrar-obras-deletar-conteudo-pesquisa{
-    width: 95%;
+    width: 45%;
     height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-cadastrar-obras-deletar-conteudo-pesquisa-input{
+    width: 70%;
+}
+
+.main-cadastrar-obras-deletar-conteudo-pesquisa-input > input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #53e90e;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.main-cadastrar-obras-deletar-conteudo-pesquisa-btn {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.main-cadastrar-obras-deletar-conteudo-pesquisa-btn svg{
+    background-color: #53e90e;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+
+.main-cadastrar-obras-deletar-container{
+    width: 30%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.main-cadastrar-obras-deletar-conteudo-pesquisa>input{
-    width: 45%;
-    height: 30%;
-    padding: 10px;
-    outline: none;
+
+.cadastrar-obras-deletar-container-lista-bloco {
+    width: 80%;
+    height: 95%;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
+}
+
+.main-cadastrar-obras-deletar-container-titulo {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #53e90e;
+}
+
+
+.main-cadastrar-obras-deletar-container-lista {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.main-cadastrar-obras-deletar-container-lista-bloco-titulo {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #4F4F4F;
+}
+
+
+.main-cadastrar-obras-deletar-container-lista-bloco-titulo > h3 {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
 }
 
 .main-cadastrar-obras-deletar-conteudo-obras{
@@ -300,11 +380,51 @@
     height: 90%;
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+
+.main-cadastrar-obras-deletar-conteudo-obras img{
+    width: 40%;
+}
+.main-cadastrar-obras-deletar-conteudo-obras h3{
+    color: #4F4F4F;
+}
+.main-cadastrar-obras-deletar-conteudo-obras-caixa{
+    width: 90%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 3%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
+}
+.main-cadastrar-obras-deletar-conteudo-obras-caixa-titulo{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-cadastrar-obras-deletar-conteudo-obras-caixa-titulo svg{
+    padding: 10px;
+    background-color: #DC143C;
+    border-radius: 10px;
+    color: #fff;
 }
 
-.main-cadastrar-obras-deletar-container{
-    width: 30%;
-    height: 100%;
-
+.main-cadastrar-obras-deletar-conteudo-obras-caixa-resumo{
+    width: 90%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
 }
+
+.main-cadastrar-obras-deletar-conteudo-obras-caixa-resumo h3, .main-cadastrar-obras-deletar-conteudo-obras-caixa-resumo p{
+    color: #4F4F4F;
+}
+
