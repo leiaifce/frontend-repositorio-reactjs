@@ -28,9 +28,9 @@ export const CadastrarObras = () => {
     const [tituloPesquisa, setTituloPesquisa] = useState('')
 
     const pesquisarObraTitulo = async () =>{
-        if (pesquisa) {
-            setPesquisa('')
-        }
+        // if (pesquisa) {
+        //     setPesquisa('')
+        // }
         try{
             const data = {
                 titulo:tituloPesquisa
@@ -39,6 +39,7 @@ export const CadastrarObras = () => {
             console.log(res)
             setPesquisaObra(true)
             setPesquisa(res.data.pesquisa)
+
 
             
 
@@ -114,10 +115,23 @@ export const CadastrarObras = () => {
         }
     }
 
+    const deletarObras = async (id) => {
+
+        try {
+            const res = await api.delete('/excluir_obras/' + id)
+            console.log(res.data)
+        } catch (err) {
+            console.log(err)
+        }
+        
+    }
+
     useEffect(() =>{
         pegarObras()
+
+    }, [Obras])
+
     
-    }, [])
 
     return(
         <div>
@@ -200,7 +214,7 @@ export const CadastrarObras = () => {
                                                         <div className="main-cadastrar-obras-deletar-conteudo-obras-caixa-titulo">
                                                             <h3>Titulo: {item.titulo}</h3>
                                                             <h3>Autores: {item.autores}</h3>
-                                                            <FaTrashAlt/>
+                                                            <FaTrashAlt onClick={() => {deletarObras(item._id)}}/>
                                                         </div>
                                                         <div className="main-cadastrar-obras-deletar-conteudo-obras-caixa-resumo">
                                                             <h3>Resumo:</h3>

@@ -410,6 +410,7 @@
 }
 .main-cadastrar-obras-deletar-conteudo-obras-caixa-titulo svg{
     padding: 10px;
+    cursor: pointer;
     background-color: #DC143C;
     border-radius: 10px;
     color: #fff;
